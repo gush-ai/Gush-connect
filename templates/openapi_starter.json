@@ -1,0 +1,37 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Gush Connect E-commerce Integration Template",
+    "description": "Standard OpenAPI schema for auto-discovering store tools in Gush AI Workspace.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.yourstore.com/v1"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "Search products",
+        "description": "Find products in the store by keyword, category, or stock availability.",
+        "operationId": "get_products",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful product list response"
+          }
+        }
+      }
+    }
+  }
+}
